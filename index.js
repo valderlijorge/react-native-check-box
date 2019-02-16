@@ -50,6 +50,8 @@ export default class CheckBox extends Component {
         checkedCheckBoxColor: PropTypes.string,
         uncheckedCheckBoxColor: PropTypes.string,
         disabled: PropTypes.bool,
+        width: PropTypes.number,
+        height: PropTypes.number,
     }
     static defaultProps = {
         isChecked: false,
@@ -111,7 +113,7 @@ export default class CheckBox extends Component {
         }
 
         return (
-            <Image source={source} style={{tintColor: this._getTintColor()}}/>
+            <Image source={source} style={{tintColor: this._getTintColor(), width: this.props.width, height: this.props.height}}/>
         );
     }
 
